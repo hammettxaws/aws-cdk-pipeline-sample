@@ -10,7 +10,7 @@ class ApplicationStack extends cdk.Stack {
     super(scope, id, props);
 
     // application bucket
-    const appBucket = new s3.Bucket(scope, 'appBucket', {
+    const appBucket = new s3.Bucket(this, 'appBucket', {
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       encryption: s3.BucketEncryption.S3_MANAGED,
     });
